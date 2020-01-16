@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --gray: hsl(0, 0%, 59%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --dark-blue: hsl(209, 33%, 12%);
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+body, input, button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px
+}
+#logo, #image {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: var(--gray);
+    margin: 4vh 0 0
+}
+p {
+    margin-bottom: 5vh;
+}
+strong {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+footer {
+    display: block;
+    font-size: 0.7em;
+    width: 100%;
+    text-align: center;
+    color: var(--gray);
+    position: absolute;
+    bottom: 10px;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 40vw;
+    margin-bottom: 6vh;
+}
+#email-input, button {
+    border-radius: 40px;
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+}
+#form-input {
+    width: 22vw;
+}
+#email-input {
+    width: 120%;
+    box-sizing: border-box;
+    border: 1px solid var(--blue)
+}
+button {
+    width: 12vw;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 600;
+}
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    margin-top: 6vh;
+}
+.social-icons > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--blue);
+    transition: 0.3s ease;
+    color: var(--blue);
+    border-radius: 50%;
+}
+.social-icons > *:hover {
+    background: var(--blue);
+    color: #fff;
+    cursor: pointer;
+}
+.error-msg {
+    margin: 5px 10px;
+    font-weight: bold;
+    color: var(--light-red);
+    font-size: 0.7em;
+    display: none;
+}
+#email-input.error {
+    border-color: var(--light-red)
+}
+#email-input.error ~ .error-msg {
+    display: inline
+}
+
+@media (max-width: 810px) {
+    form {
+        flex-wrap: wrap
+    }
+    form > * {
+        flex-basis: 100%
+    }
+    #form-input, #email-input {
+        width: 100%;
+    }
+    button {
+        margin-top: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
